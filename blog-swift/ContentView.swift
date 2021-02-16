@@ -23,6 +23,7 @@ struct ContentView: View {
                         .resizable()
                         .frame(width: 30, height: 30)
                 }
+                    .padding()
                 List(1..<10) {_ in
                     ZStack {
                         PostPreview()
@@ -40,7 +41,6 @@ struct ContentView: View {
                 
             }
         }
-        .padding()
         .edgesIgnoringSafeArea(.bottom)
     }
 }

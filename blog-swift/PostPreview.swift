@@ -12,14 +12,16 @@ struct PostPreview: View {
         HStack {
                 Image("photo")
                     .resizable()
-                    .frame(width: 80, height: 110)
-                    .cornerRadius(12)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 90, height: 120)
+                    .cornerRadius(20)
                 VStack(alignment: .leading) {
                     Spacer()
                     HStack {
-                        Text("Tech Crunch")
+                        Text("Example Tag")
                             .font(.footnote)
                             .fontWeight(.bold)
+                            .foregroundColor(.secondary)
                         Spacer()
                         HStack {
                             Image(systemName: "calendar")

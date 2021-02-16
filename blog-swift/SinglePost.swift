@@ -28,13 +28,14 @@ struct SinglePost: View {
                     .padding()
                 Image("photo")
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 130)
                     .cornerRadius(20)
             }
             VStack(alignment: .leading) {
                 Spacer()
                 HStack {
-                    Text("Example Tag / Topic")
+                    Text("Example Tag")
                         .font(.footnote)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
@@ -71,6 +72,7 @@ struct SinglePost: View {
             }
             .padding()
             .navigationBarTitle("")
+            .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }
     }
