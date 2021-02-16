@@ -11,7 +11,6 @@ struct SinglePost: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 130) {
-                Image(systemName: "arrowshape.turn.up.left.fill")
                 Image("photo")
                     .resizable()
                     .frame(width: 100, height: 130)
@@ -57,9 +56,7 @@ struct SinglePost: View {
                 Spacer()
             }
             .padding()
-            .navigationBarBackButtonHidden(true)
             .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
     }
 }

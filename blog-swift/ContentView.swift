@@ -9,38 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack (alignment: .leading) {
-            HStack {
-                VStack (alignment: .leading, spacing: 12) {
-                    Text("Sample Blog")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Text("Minimalist app made with SwiftUI")
+        NavigationView{
+            VStack (alignment: .leading) {
+                HStack {
+                    VStack (alignment: .leading, spacing: 12) {
+                        Text("Sample Blog")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Text("Minimalist app made with SwiftUI")
+                    }
+                    Spacer()
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(width: 30, height: 30)
                 }
-                Spacer()
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-            }
-//            .padding(.bottom, 30)
-            NavigationView {
                 List(1..<10) {_ in
                     ZStack {
-                        PostPreview()
                         NavigationLink(destination: SinglePost()) {
+                            PostPreview()
+                        
                             Divider()
                                 .padding()
                                 .foregroundColor(.primary)
                             EmptyView()
                         }
-                        .opacity(0)
+//                        .opacity(0)
                     }
                 }
+                .frame(width: .infinity)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
             }
         }
-        .padding().edgesIgnoringSafeArea(.bottom)
+        .padding()
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
