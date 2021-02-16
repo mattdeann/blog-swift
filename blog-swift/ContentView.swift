@@ -25,9 +25,8 @@ struct ContentView: View {
                 }
                 List(1..<10) {_ in
                     ZStack {
+                        PostPreview()
                         NavigationLink(destination: SinglePost()) {
-                            PostPreview()
-                        
                             Divider()
                                 .padding()
                                 .foregroundColor(.primary)
@@ -36,7 +35,7 @@ struct ContentView: View {
 //                        .opacity(0)
                     }
                 }
-                .frame(width: .infinity)
+                .listStyle(PlainListStyle())
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
             }
