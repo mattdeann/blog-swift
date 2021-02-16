@@ -32,12 +32,12 @@ struct ContentView: View {
                                 .foregroundColor(.primary)
                             EmptyView()
                         }
-//                        .opacity(0)
                     }
                 }
                 .listStyle(PlainListStyle())
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
+                
             }
         }
         .padding()
